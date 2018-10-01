@@ -1,0 +1,10 @@
+var favoriteNumber = 4 / 2;
+var someones_number = 13;
+someones_number = 7;
+favoriteNumber = favoriteNumber * 26;
+console.log(favoriteNumber - someones_number);
+
+var str = "super califragilistic expialidocious";
+console.log(str.length);
+
+console.log(20/0);
