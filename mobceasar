@@ -1,0 +1,32 @@
+//TODO: wrote a ceasar cypher and do it up with HTML/CSS if time
+//Step 1: write a function for Encrypt that takes a key and word to encrypt
+//Step 2: Write a loop to convert string into array, change letters based on the key
+//Step 3: determine position of characters in decrypted within alphabet
+//Step 4: pull characters out of alphabet based on product of step 3
+//Step 5: take positions yielded by previous line, draw characters out of alphabet and convert back into single string
+//Step 3: Convert encrypted word back into a string
+//Step nil: write an if else to allow position to reset to zero if if it exceeds the 24th place. if newpos > 24, then reset to beginning
+// when newpositions resets to zero, needs to add the remainder of the positions to newpositions
+function encrypt(key,word) {
+  let decrypted = word.split('')
+  let alphabet0 = "abcdefghijklmnopqrstuvwxyz"
+  let alphabet = alphabet0.split('')
+  let encrypted = []
+  var encryptedword
+
+  for(i=0; i<decrypted.length; i++) {
+    var position = alphabet.indexOf(decrypted[i]);
+    var newpositions = (position + key);
+
+      if(newpositions > alphabet.length) {
+        let posremainder = newpositions - alphabet.length
+        newpositions = posremainder }
+
+    var encryptedcharacters = alphabet[newpositions]
+    encrypted.push(encryptedcharacters)
+
+  } encryptedword = encrypted.join('')
+
+  console.log(encryptedword);
+
+} encrypt(17,"heyguys")
