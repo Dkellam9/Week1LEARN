@@ -1,0 +1,40 @@
+function CarMaker(newMake,newYear,newColor, speed, maxSpd) {
+    this.make = newMake;
+    this.year = newYear;
+    this.color = newColor;
+    this.speed = speed;
+    this.maxSpd = maxSpd;
+    this.printInfo = function() {
+      return `${this.color} ${this.year} ${this.make}`
+    };
+    this.getSpeed = function() {
+      return this.speed;
+    };
+    this.accelerate = function() {
+      this.speed += 10;
+    };
+    this.brake = function() {
+      this.speed -= Math.floor(Math.random() * (this.speed / 2));
+    };
+    this.toSeventy = function() {
+      while(this.speed < this.maxSpd) {
+        this.accelerate()
+        if(this.speed > this.maxSpd) {
+         console.log(". \\ | / .");
+         console.log("- *BANG* -");
+         break;
+       }
+       console.log(this.speed);
+      }
+    };
+    this.toZero = function() {
+      while(this.speed >= 7) {
+        this.brake();
+        console.log(this.speed)
+      }
+    }
+}
+
+let car = new CarMaker('Subaru', '1992', 'Red', 50, 85);
+console.log(car.toZero());
+//console.log(car.toZero());
