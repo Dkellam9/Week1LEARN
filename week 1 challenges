@@ -1,0 +1,21 @@
+//given this array, return a new array that has only odd numbers
+//var numArr = [3,5,16,18,9,11,16]
+//expected output [3,5,9,11]
+//turn into function
+//refactor w .map or .filter
+
+//basic loop as function
+function oddNum(numArr) {
+  var newArr = []
+  for (i=0; i<numArr.length; i++) {
+    if (numArr[i] % 2 > 0) {
+      newArr.push(i)
+    }
+  }
+  console.log(newArr);
+}
+
+oddNum([3,5,16,18,9,16])
+
+
+//loop utilizing .map or .filter
