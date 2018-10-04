@@ -9,7 +9,7 @@ function oddNum(numArr) {
   var newArr = []
   for (i=0; i<numArr.length; i++) {
     if (numArr[i] % 2 > 0) {
-      newArr.push(i)
+      newArr.push(newArr[i])
     }
   }
   console.log(newArr);
